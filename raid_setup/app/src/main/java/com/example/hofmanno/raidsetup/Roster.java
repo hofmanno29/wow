@@ -69,9 +69,25 @@ public class Roster extends AppCompatActivity {
         EditText name;
         String gearscore;
         EditText gear;
+        int count=1;
+        int id;
         int member_test;
 
-        content=prefs.getString("name_1", "");
+        while (count <= member_count){
+            content=prefs.getString("name_"+count,"");
+            id = getResources().getIdentifier("name_"+String.valueOf(count),"id",getPackageName());
+            name=(EditText)findViewById(id);
+            name.setText(content);
+
+            content=prefs.getString("gear_"+count,"");
+            id = getResources().getIdentifier("gear_"+String.valueOf(count),"id",getPackageName());
+            gear=(EditText)findViewById(id);
+            gear.setText(content);
+
+            count++;
+        }
+
+        /*content=prefs.getString("name_1", "");
         name=(EditText)findViewById(R.id.name_1);
         name.setText(content);
         gearscore = prefs.getString("gear_1","");
@@ -90,7 +106,7 @@ public class Roster extends AppCompatActivity {
         name.setText(content);
         gearscore = prefs.getString("gear_3","");
         gear = (EditText)findViewById(R.id.gear_3);
-        gear.setText(gearscore);
+        gear.setText(gearscore);*/
 
 
         //For later reference, to save the new rows
