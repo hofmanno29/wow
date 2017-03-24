@@ -68,7 +68,7 @@
                     android:layout_height="match_parent" >
                     <EditText
                         android:id="@+id/name_1"
-                        android:hint="Name"
+                        android:hint="Member 1"
                         android:gravity="left"
                         android:inputType="text" />
                     <Spinner
@@ -84,10 +84,10 @@
                         android:layout_height="match_parent"
                         android:id="@+id/spinner_off_role_1" />
                     <EditText
-                        android:id="@+id/gearscore_1"
+                        android:id="@+id/gear_1"
                         android:hint="Gearscore"
                         android:gravity="left"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:maxLength="4" />
                 </TableRow>
 
@@ -95,7 +95,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
                     <EditText
-                        android:hint="Name"
+                        android:id="@+id/name_2"
+                        android:hint="Member 2"
                         android:gravity="left"
                         android:inputType="text" />
                     <Spinner
@@ -111,6 +112,7 @@
                         android:layout_height="match_parent"
                         android:id="@+id/spinner_off_role_2" />
                     <EditText
+                        android:id="@+id/gear_2"
                         android:hint="Gearscore"
                         android:gravity="left"
                         android:inputType="number"
@@ -121,7 +123,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
                     <EditText
-                        android:hint="Name"
+                        android:id="@+id/name_3"
+                        android:hint="Member 3"
                         android:gravity="left"
                         android:inputType="text" />
                     <Spinner
@@ -137,6 +140,203 @@
                         android:layout_height="match_parent"
                         android:id="@+id/spinner_off_role_3" />
                     <EditText
+                        android:id="@+id/gear_3"
+                        android:hint="Gearscore"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/name_4"
+                        android:hint="Member 4"
+                        android:gravity="left"
+                        android:inputType="text" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_class_4" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_role_4" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_off_role_4" />
+                    <EditText
+                        android:id="@+id/gear_4"
+                        android:hint="Gearscore"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/name_5"
+                        android:hint="Member 5"
+                        android:gravity="left"
+                        android:inputType="text" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_class_5" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_role_5" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_off_role_5" />
+                    <EditText
+                        android:id="@+id/gear_5"
+                        android:hint="Gearscore"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/name_6"
+                        android:hint="Member 6"
+                        android:gravity="left"
+                        android:inputType="text" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_class_6" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_role_6" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_off_role_6" />
+                    <EditText
+                        android:id="@+id/gear_6"
+                        android:hint="Gearscore"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/name_7"
+                        android:hint="Member 7"
+                        android:gravity="left"
+                        android:inputType="text" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_class_7" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_role_7" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_off_role_7" />
+                    <EditText
+                        android:id="@+id/gear_7"
+                        android:hint="Gearscore"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/name_8"
+                        android:hint="Member 8"
+                        android:gravity="left"
+                        android:inputType="text" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_class_8" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_role_8" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_off_role_8" />
+                    <EditText
+                        android:id="@+id/gear_8"
+                        android:hint="Gearscore"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/name_9"
+                        android:hint="Member 9"
+                        android:gravity="left"
+                        android:inputType="text" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_class_9" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_role_9" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_off_role_9" />
+                    <EditText
+                        android:id="@+id/gear_9"
+                        android:hint="Gearscore"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/name_10"
+                        android:hint="Member 10"
+                        android:gravity="left"
+                        android:inputType="text" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_class_10" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_role_10" />
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spinner_off_role_10" />
+                    <EditText
+                        android:id="@+id/gear_10"
                         android:hint="Gearscore"
                         android:gravity="left"
                         android:inputType="number"

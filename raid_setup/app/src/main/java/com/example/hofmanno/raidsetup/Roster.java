@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class Roster extends AppCompatActivity {
 
-    int i = 0;
+    int member_count = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +25,39 @@ public class Roster extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        EditText editText=(EditText)findViewById(R.id.name_1);
+        EditText name;
+        EditText gear;
+        int count = 1;
+        int id;
+
         SharedPreferences prefs= getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor e=prefs.edit();
-        e.putString("content",editText.getText().toString());
-        e.putString("gearscore","1");
+
+        while (count <= member_count){
+            id = getResources().getIdentifier("name_"+String.valueOf(count),"id",getPackageName());
+            name = (EditText)findViewById(id);
+            e.putString("name_"+String.valueOf(count),name.getText().toString());
+
+            id = getResources().getIdentifier("gear_"+String.valueOf(count),"id",getPackageName());
+            gear = (EditText)findViewById(id);
+            e.putString("gear_"+String.valueOf(count),gear.getText().toString());
+
+            count++;
+        }
+
+
+        //For later reference, to save the new rows
+        /*if (member_count>3){
+            name=(EditText)findViewById(Integer.valueOf(member_count));
+            gear=(EditText)findViewById(Integer.valueOf(member_count));
+            e.putString("name_4",name.getText().toString());
+            e.putString("gear_4",gear.getText().toString());
+            System.out.println("onstop");
+        }
+
+        e.putInt("member_count",member_count);
+        System.out.println("member_count: " + member_count);*/
+
         e.commit();
         super.onStop();
     }
@@ -37,9 +65,47 @@ public class Roster extends AppCompatActivity {
     @Override
     protected void onStart() {
         SharedPreferences prefs= getPreferences(MODE_PRIVATE);
-        String content=prefs.getString("content", "default");
-        EditText name=(EditText)findViewById(R.id.name_1);
+        String content;
+        EditText name;
+        String gearscore;
+        EditText gear;
+        int member_test;
+
+        content=prefs.getString("name_1", "");
+        name=(EditText)findViewById(R.id.name_1);
         name.setText(content);
+        gearscore = prefs.getString("gear_1","");
+        gear = (EditText)findViewById(R.id.gear_1);
+        gear.setText(gearscore);
+
+        content=prefs.getString("name_2", "");
+        name=(EditText)findViewById(R.id.name_2);
+        name.setText(content);
+        gearscore = prefs.getString("gear_2","");
+        gear = (EditText)findViewById(R.id.gear_2);
+        gear.setText(gearscore);
+
+        content=prefs.getString("name_3", "");
+        name=(EditText)findViewById(R.id.name_3);
+        name.setText(content);
+        gearscore = prefs.getString("gear_3","");
+        gear = (EditText)findViewById(R.id.gear_3);
+        gear.setText(gearscore);
+
+
+        //For later reference, to save the new rows
+        /*member_test=prefs.getInt("member_count",4711);
+
+        if (member_test>1){
+            content=prefs.getString("name_4", "");
+            name=(EditText)findViewById(Integer.valueOf(member_count));
+            name.setText(content);
+            gearscore = prefs.getString("gear_4","");
+            gear = (EditText)findViewById(Integer.valueOf(member_count));
+            gear.setText(gearscore);
+            System.out.println("onstart");
+        }*/
+
         super.onStart();
     }
 
@@ -61,11 +127,14 @@ public class Roster extends AppCompatActivity {
     }
 
     public void new_member(View aView){
+        member_count++;
+        String count = String.valueOf(member_count);
+
         TableLayout tbl = (TableLayout) findViewById(R.id.members);
         TableRow row = new TableRow(this);
         EditText name = new EditText(this);
-        name.setHint("Name");
-        //name.setId(i);
+        name.setHint("Member " + count);
+        name.setId(Integer.valueOf(member_count));
         EditText gearscore = new EditText(this);
         gearscore.setHint("Gearscore");
         Spinner clas = new Spinner(this);
@@ -78,6 +147,9 @@ public class Roster extends AppCompatActivity {
         row.addView(off_role);
         row.addView(gearscore);
         tbl.addView(row);
-        i++;
+
+        int id_test = name.getId();
+
+        System.out.println("id der letzten Reihe: " + id_test);
     }
 }
