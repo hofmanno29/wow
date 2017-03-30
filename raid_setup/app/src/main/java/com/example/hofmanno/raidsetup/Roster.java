@@ -87,27 +87,6 @@ public class Roster extends AppCompatActivity {
             count++;
         }
 
-        /*content=prefs.getString("name_1", "");
-        name=(EditText)findViewById(R.id.name_1);
-        name.setText(content);
-        gearscore = prefs.getString("gear_1","");
-        gear = (EditText)findViewById(R.id.gear_1);
-        gear.setText(gearscore);
-
-        content=prefs.getString("name_2", "");
-        name=(EditText)findViewById(R.id.name_2);
-        name.setText(content);
-        gearscore = prefs.getString("gear_2","");
-        gear = (EditText)findViewById(R.id.gear_2);
-        gear.setText(gearscore);
-
-        content=prefs.getString("name_3", "");
-        name=(EditText)findViewById(R.id.name_3);
-        name.setText(content);
-        gearscore = prefs.getString("gear_3","");
-        gear = (EditText)findViewById(R.id.gear_3);
-        gear.setText(gearscore);*/
-
 
         //For later reference, to save the new rows
         /*member_test=prefs.getInt("member_count",4711);
@@ -167,5 +146,24 @@ public class Roster extends AppCompatActivity {
         int id_test = name.getId();
 
         System.out.println("id der letzten Reihe: " + id_test);
+    }
+
+    public void clear(View aView){
+        int count = 1;
+        int id;
+        EditText name;
+        EditText gear;
+
+        while (count <= member_count){
+            id = getResources().getIdentifier("name_"+String.valueOf(count),"id",getPackageName());
+            name = (EditText)findViewById(id);
+            name.setText("");
+
+            id = getResources().getIdentifier("gear_"+String.valueOf(count),"id",getPackageName());
+            gear = (EditText)findViewById(id);
+            gear.setText("");
+
+            count++;
+        }
     }
 }

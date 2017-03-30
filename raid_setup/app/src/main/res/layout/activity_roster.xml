@@ -16,21 +16,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/button2"
+        android:id="@+id/button_new_member"
         android:onClick="new_member"/>
 
     <Button
-        android:text="Button"
+        android:text="Clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/button_clear"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="clear"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/button_new_member"
         android:layout_marginBottom="16dp">
 
         <HorizontalScrollView
