@@ -9,6 +9,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Roster">
+
+        </activity>
+        <activity
+            android:name=".navigation"
+            android:label="@string/title_activity_navigation"
+            android:parentActivityName=".Roster"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hofmanno.raidsetup.Roster" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

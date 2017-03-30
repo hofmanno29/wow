@@ -1,5 +1,6 @@
 package com.example.hofmanno.raidsetup;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -170,7 +171,7 @@ public class Roster extends AppCompatActivity {
     }
 
     public void new_member(View aView){
-        member_count++;
+        /*member_count++;
         String count = String.valueOf(member_count);
 
         TableLayout tbl = (TableLayout) findViewById(R.id.members);
@@ -193,7 +194,7 @@ public class Roster extends AppCompatActivity {
 
         int id_test = name.getId();
 
-        System.out.println("id der letzten Reihe: " + id_test);
+        System.out.println("id der letzten Reihe: " + id_test);*/
     }
 
     public void clear(View aView){
