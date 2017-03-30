@@ -27,6 +27,9 @@ public class Roster extends AppCompatActivity {
     protected void onStop() {
         EditText name;
         EditText gear;
+        Spinner spinner_class;
+        Spinner spinner_role;
+        Spinner spinner_off_role;
         int count = 1;
         int id;
 
@@ -41,6 +44,18 @@ public class Roster extends AppCompatActivity {
             id = getResources().getIdentifier("gear_"+String.valueOf(count),"id",getPackageName());
             gear = (EditText)findViewById(id);
             e.putString("gear_"+String.valueOf(count),gear.getText().toString());
+
+            id = getResources().getIdentifier("spinner_class_"+String.valueOf(count),"id",getPackageName());
+            spinner_class = (Spinner)findViewById(id);
+            e.putInt("spinner_class_"+String.valueOf(count),spinner_class.getSelectedItemPosition());
+
+            id = getResources().getIdentifier("spinner_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_role = (Spinner)findViewById(id);
+            e.putInt("spinner_role_"+String.valueOf(count),spinner_role.getSelectedItemPosition());
+
+            id = getResources().getIdentifier("spinner_off_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_off_role = (Spinner)findViewById(id);
+            e.putInt("spinner_off_role_"+String.valueOf(count),spinner_off_role.getSelectedItemPosition());
 
             count++;
         }
@@ -69,6 +84,10 @@ public class Roster extends AppCompatActivity {
         EditText name;
         String gearscore;
         EditText gear;
+        int spinner_position;
+        Spinner spinner_class;
+        Spinner spinner_role;
+        Spinner spinner_off_role;
         int count=1;
         int id;
         int member_test;
@@ -83,6 +102,21 @@ public class Roster extends AppCompatActivity {
             id = getResources().getIdentifier("gear_"+String.valueOf(count),"id",getPackageName());
             gear=(EditText)findViewById(id);
             gear.setText(content);
+
+            spinner_position=prefs.getInt("spinner_class_"+count,0);
+            id = getResources().getIdentifier("spinner_class_"+String.valueOf(count),"id",getPackageName());
+            spinner_class=(Spinner)findViewById(id);
+            spinner_class.setSelection(spinner_position);
+
+            spinner_position=prefs.getInt("spinner_role_"+count,0);
+            id = getResources().getIdentifier("spinner_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_role=(Spinner)findViewById(id);
+            spinner_role.setSelection(spinner_position);
+
+            spinner_position=prefs.getInt("spinner_off_role_"+count,0);
+            id = getResources().getIdentifier("spinner_off_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_off_role=(Spinner)findViewById(id);
+            spinner_off_role.setSelection(spinner_position);
 
             count++;
         }
@@ -105,20 +139,34 @@ public class Roster extends AppCompatActivity {
     }
 
     public void initiateSpinners(){
+        int count = 1;
+        int id;
+
+        Spinner spinner_class;
+        Spinner spinner_role;
+        Spinner spinner_off_role;
+
         ArrayAdapter<CharSequence> adapter_class = ArrayAdapter.createFromResource(this, R.array.class_array, android.R.layout.simple_spinner_item);
         adapter_class.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         ArrayAdapter<CharSequence> adapter_role = ArrayAdapter.createFromResource(this, R.array.role_array, android.R.layout.simple_spinner_item);
         adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        Spinner spinner_class = (Spinner) findViewById(R.id.spinner_class_1);
-        spinner_class.setAdapter(adapter_class);
+        while (count<=member_count){
+            id = getResources().getIdentifier("spinner_class_"+String.valueOf(count),"id",getPackageName());
+            spinner_class = (Spinner)findViewById(id);
+            spinner_class.setAdapter(adapter_class);
 
-        Spinner spinner_role = (Spinner) findViewById(R.id.spinner_role_1);
-        spinner_role.setAdapter(adapter_role);
+            id = getResources().getIdentifier("spinner_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_role = (Spinner)findViewById(id);
+            spinner_role.setAdapter(adapter_role);
 
-        Spinner spinner_off_role = (Spinner) findViewById(R.id.spinner_off_role_1);
-        spinner_off_role.setAdapter(adapter_role);
+            id = getResources().getIdentifier("spinner_off_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_off_role = (Spinner)findViewById(id);
+            spinner_off_role.setAdapter(adapter_role);
+
+            count++;
+        }
     }
 
     public void new_member(View aView){
@@ -153,6 +201,9 @@ public class Roster extends AppCompatActivity {
         int id;
         EditText name;
         EditText gear;
+        Spinner spinner_class;
+        Spinner spinner_role;
+        Spinner spinner_off_role;
 
         while (count <= member_count){
             id = getResources().getIdentifier("name_"+String.valueOf(count),"id",getPackageName());
@@ -162,6 +213,18 @@ public class Roster extends AppCompatActivity {
             id = getResources().getIdentifier("gear_"+String.valueOf(count),"id",getPackageName());
             gear = (EditText)findViewById(id);
             gear.setText("");
+
+            id = getResources().getIdentifier("spinner_class_"+String.valueOf(count),"id",getPackageName());
+            spinner_class = (Spinner)findViewById(id);
+            spinner_class.setSelection(0);
+
+            id = getResources().getIdentifier("spinner_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_role = (Spinner)findViewById(id);
+            spinner_role.setSelection(0);
+
+            id = getResources().getIdentifier("spinner_off_role_"+String.valueOf(count),"id",getPackageName());
+            spinner_off_role = (Spinner)findViewById(id);
+            spinner_off_role.setSelection(0);
 
             count++;
         }
