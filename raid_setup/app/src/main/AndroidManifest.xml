@@ -13,7 +13,7 @@
         </activity>
         <activity
             android:name=".navigation"
-            android:label="@string/title_activity_navigation"
+            android:label="Raid Setup"
             android:parentActivityName=".Roster"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
