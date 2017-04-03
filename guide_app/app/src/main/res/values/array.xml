@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shaman">
+        <item>Restoration</item>
+        <item>Elemental</item>
+        <item>Enhancement</item>
+    </string-array>
+</resources>
