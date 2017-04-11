@@ -1,12 +1,15 @@
 package com.example.hofmanno.classhelper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 
 /**
@@ -17,7 +20,7 @@ import android.view.ViewGroup;
  * Use the {@link shamanFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class shamanFragment extends Fragment {
+public class shamanFragment extends Fragment implements AdapterView.OnItemClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -63,8 +66,12 @@ public class shamanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shaman, container, false);
+        View view = inflater.inflate(R.layout.fragment_shaman, container, false);
+
+        ListView listView = (ListView)view.findViewById(R.id.listview_shaman);
+        listView.setOnItemClickListener(this);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -89,6 +96,25 @@ public class shamanFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        int spec = ((int) id);
+
+        switch (spec) {
+            case 0:
+                Intent i = new Intent(getActivity(), shamanResto.class);
+                startActivity(i);
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+
     }
 
     /**

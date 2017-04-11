@@ -35,6 +35,19 @@ public class navigation extends AppCompatActivity
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                EditText name=(EditText)findViewById(R.id.name_1);
+                name.setText("hallooaoaoa");
+            }
+        });
+
+        FloatingActionButton fab_clear = (FloatingActionButton) findViewById(R.id.fab_clear);
+        fab_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                EditText name=(EditText)findViewById(R.id.name_1);
+                name.setText("");
             }
         });
 

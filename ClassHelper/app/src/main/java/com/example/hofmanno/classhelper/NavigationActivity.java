@@ -1,5 +1,6 @@
 package com.example.hofmanno.classhelper;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,7 +17,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class NavigationActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ahomeFragment.OnFragmentInteractionListener, shamanFragment
+        .OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +102,7 @@ public class NavigationActivity extends AppCompatActivity
             case R.id.nav_deathknight:
                 break;
             case R.id.nav_druid:
-                fragmentClass = druidFragment.class;
+                //fragmentClass = druidFragment.class;
                 break;
             case R.id.nav_hunter:
                 break;
@@ -135,5 +137,10 @@ public class NavigationActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

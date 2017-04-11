@@ -1,9 +1,13 @@
 package com.example.hofmanno.classhelper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -102,8 +106,23 @@ public class fragment_shaman extends Fragment implements AdapterView.OnItemClick
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        int spec = ((int) id);
+
+        switch (spec) {
+            case 0:
+                Intent i = new Intent(getActivity(), shaman_resto.class);
+                startActivity(i);
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
 
     }
+
 
     /**
      * This interface must be implemented by activities that contain this

@@ -1,8 +1,8 @@
 package com.example.hofmanno.classhelper;
 
+import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class shaman_resto extends AppCompatActivity {
+public class shamanResto extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -150,7 +150,7 @@ public class shaman_resto extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Gems";
+                    return "SECTION 1";
                 case 1:
                     return "SECTION 2";
                 case 2:
