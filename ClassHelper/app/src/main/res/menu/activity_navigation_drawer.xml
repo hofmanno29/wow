@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Classes">
+        <menu>
+            <item
+                android:id="@+id/nav_deathknight"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Death Knight"/>
+            <item
+                android:id="@+id/nav_druid"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Druid"/>
+            <item
+                android:id="@+id/nav_hunter"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Hunter"/>
+            <item
+                android:id="@+id/nav_mage"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Mage"/>
+            <item
+                android:id="@+id/nav_paladin"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Paladin"/>
+            <item
+                android:id="@+id/nav_priest"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Priest"/>
+            <item
+                android:id="@+id/nav_rogue"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Rogue"/>
+            <item
+                android:id="@+id/nav_shaman"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Shaman"/>
+            <item
+                android:id="@+id/nav_warlock"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Warlock"/>
+            <item
+                android:id="@+id/nav_warrior"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Warrior"/>
+        </menu>
+    </item>
+
+
+    <item android:title="Tools">
+        <menu>
+            <item
+                android:id="@+id/nav_gemtable"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Gem Table"/>
+            <item
+                android:id="@+id/nav_itemcompare"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Item Comparison"/>
+        </menu>
+    </item>
+
+</menu>
