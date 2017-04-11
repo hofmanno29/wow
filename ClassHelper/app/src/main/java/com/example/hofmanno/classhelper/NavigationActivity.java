@@ -18,7 +18,7 @@ import android.view.MenuItem;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ahomeFragment.OnFragmentInteractionListener, shamanFragment
-        .OnFragmentInteractionListener {
+        .OnFragmentInteractionListener, itemcompareFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +120,9 @@ public class NavigationActivity extends AppCompatActivity
             case R.id.nav_warlock:
                 break;
             case R.id.nav_warrior:
+                break;
+            case R.id.nav_itemcompare:
+                fragmentClass = itemcompareFragment.class;
                 break;
             default:
                 break;

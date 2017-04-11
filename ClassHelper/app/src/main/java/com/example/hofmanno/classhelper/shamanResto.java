@@ -116,9 +116,28 @@ public class shamanResto extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_shaman_resto, container, false);
+            View rootView = null;
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)){
+                case 1:
+                    rootView = inflater.inflate(R.layout.fragment_shaman_resto_talents, container, false);
+                    break;
+                case 2:
+                    rootView = inflater.inflate(R.layout.fragment_shaman_resto_gems, container, false);
+                    break;
+                case 3:
+                    rootView = inflater.inflate(R.layout.fragment_shaman_resto_enchantments, container, false);
+                    break;
+                case 4:
+                    rootView = inflater.inflate(R.layout.fragment_shaman_resto_pseudopower, container, false);
+                    break;
+                case 5:
+                    rootView = inflater.inflate(R.layout.fragment_shaman_resto_bis, container, false);
+                    break;
+            }
+
+            /*View rootView = inflater.inflate(R.layout.fragment_shaman_resto_gems, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));*/
             return rootView;
         }
     }
@@ -142,19 +161,23 @@ public class shamanResto extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Number of total pages.
+            return 5;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Talents";
                 case 1:
-                    return "SECTION 2";
+                    return "Gems";
                 case 2:
-                    return "SECTION 3";
+                    return "Enchantments";
+                case 3:
+                    return "Pseudo Power";
+                case 4:
+                    return "Best in Slot";
             }
             return null;
         }
