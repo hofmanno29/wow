@@ -79,17 +79,57 @@ public class itemcompareFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String current_class = spinner_class.getSelectedItem().toString();
+                Spinner spinner_role = (Spinner) view.findViewById(R.id.spinner_role);
+                ArrayAdapter<CharSequence> adapter_role = null;
                 switch (current_class) {
                     case "Death Knight":
-                        System.out.println("dk");
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.super.getContext(), R.array.tankmelee_array, android.R.layout
+                                .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Druid":
-                        System.out.println("druid");
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.super.getContext(), R.array.alround_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Hunter":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.ranged_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Mage":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.ranged_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Paladin":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.tankmeleeheal_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Priest":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.rangedheal_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Rogue":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.melee_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Shaman":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.meleerangedheal_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Warlock":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.ranged_array, android.R.layout
+                                .simple_spinner_item);
+                        break;
+                    case "Warrior":
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.tankmelee_array, android.R.layout
+                                .simple_spinner_item);
                         break;
                     default:
-                        System.out.println("other");
+                        adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.alround_array, android.R.layout
+                                .simple_spinner_item);
                         break;
                 }
+
             }
 
             @Override
@@ -97,12 +137,6 @@ public class itemcompareFragment extends Fragment {
 
             }
         });
-
-        ArrayAdapter<CharSequence> adapter_role = ArrayAdapter.createFromResource(this.getContext(), R.array.role_array, android.R.layout
-                .simple_spinner_item);
-        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        Spinner spinner_role = (Spinner) view.findViewById(R.id.spinner_role);
-        spinner_role.setAdapter(adapter_role);
 
         return view;
     }

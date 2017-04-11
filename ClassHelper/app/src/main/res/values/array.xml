@@ -17,8 +17,32 @@
         <item>Warlock</item>
         <item>Warrior</item>
     </string-array>
-    <string-array name="role_array">
+    <string-array name="tankmelee_array">
         <item>Tank</item>
+        <item>Melee</item>
+    </string-array>
+    <string-array name="alround_array">
+        <item>Tank</item>
+        <item>Melee</item>
+        <item>Ranged</item>
+        <item>Healer</item>
+    </string-array>
+    <string-array name="ranged_array">
+        <item>Ranged</item>
+    </string-array>
+    <string-array name="tankmeleeheal_array">
+        <item>Tank</item>
+        <item>Melee</item>
+        <item>Healer</item>
+    </string-array>
+    <string-array name="rangedheal_array">
+        <item>Ranged</item>
+        <item>Healer</item>
+    </string-array>
+    <string-array name="melee_array">
+        <item>Melee</item>
+    </string-array>
+    <string-array name="meleerangedheal_array">
         <item>Melee</item>
         <item>Ranged</item>
         <item>Healer</item>
