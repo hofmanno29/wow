@@ -74,13 +74,16 @@ public class itemcompareFragment extends Fragment {
         adapter_class.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         final Spinner spinner_class = (Spinner) view.findViewById(R.id.spinner_class);
         spinner_class.setAdapter(adapter_class);
+        final Spinner spinner_role = (Spinner) view.findViewById(R.id.spinner_role);
 
         spinner_class.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            String current_class;
+            ArrayAdapter<CharSequence> adapter_role = null;
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String current_class = spinner_class.getSelectedItem().toString();
-                Spinner spinner_role = (Spinner) view.findViewById(R.id.spinner_role);
-                ArrayAdapter<CharSequence> adapter_role = null;
+                current_class = spinner_class.getSelectedItem().toString();
+
                 switch (current_class) {
                     case "Death Knight":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.super.getContext(), R.array.tankmelee_array, android.R.layout
@@ -91,44 +94,77 @@ public class itemcompareFragment extends Fragment {
                     case "Druid":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.super.getContext(), R.array.alround_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Hunter":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.ranged_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Mage":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.ranged_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Paladin":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.tankmeleeheal_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Priest":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.rangedheal_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Rogue":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.melee_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Shaman":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.meleerangedheal_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Warlock":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.ranged_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     case "Warrior":
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.tankmelee_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                     default:
                         adapter_role = ArrayAdapter.createFromResource(itemcompareFragment.this.getActivity(), R.array.alround_array, android.R.layout
                                 .simple_spinner_item);
+                        adapter_role.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        spinner_role.setAdapter(adapter_role);
                         break;
                 }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        spinner_role.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
             }
 

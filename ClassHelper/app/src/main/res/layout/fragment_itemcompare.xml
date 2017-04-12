@@ -2,59 +2,164 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.example.hofmanno.classhelper.itemcompareFragment"
-                android:padding="16dp">
+                android:padding="16dp"
+                tools:context="com.example.hofmanno.classhelper.itemcompareFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <RelativeLayout
+        android:id="@+id/layout_class"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/layout_class"
-        android:padding="5dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:padding="5dp">
 
         <Spinner
+            android:id="@+id/spinner_class"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_class"
-            android:layout_toEndOf="@+id/textView_class"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView_class"/>
 
         <TextView
-            android:text="Class:"
+            android:id="@+id/textView_class"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:id="@+id/textView_class"
             android:layout_centerHorizontal="false"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:text="Class:"/>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_role"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_below="@id/layout_class">
+        android:layout_below="@id/layout_class"
+        android:padding="5dp">
 
         <TextView
-            android:text="Role:"
+            android:id="@+id/textView_role"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView_role"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:text="Role:"/>
 
         <Spinner
+            android:id="@+id/spinner_role"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_role"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/textView_role"/>
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_role"
+        android:layout_marginTop="20dp"
+        android:text="Enter the stats of each item below, and the app will try to give a recommendation on which item to use for your class/role combination."/>
 
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stamina: "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Strength: "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stamina: "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Strength: "/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strength:"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stamina:"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strength:"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Stamina"/>
+                <EditText
+                    android:layout_width="wrap_content"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 
 </RelativeLayout>
